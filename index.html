@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Khalil Al-Khairy Abdul Hakim — Frontend Developer & Graphic Designer berbasis di Bogor, Indonesia." />
+  <meta name="keywords" content="frontend developer, graphic designer, UI/UX, Bogor, Indonesia, portfolio, HTML, CSS, JavaScript, Khalil Al-Khairy" />
+  <meta name="author" content="Khalil Al-Khairy Abdul Hakim" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Khalil Al-Khairy — Frontend Developer & Designer" />
+  <meta property="og:description" content="Portfolio of Khalil Al-Khairy Abdul Hakim, a Frontend Developer and Graphic Designer based in Bogor, Indonesia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://khalil16-png.github.io" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khalil Al-Khairy — Frontend Developer & Designer" />
+  <meta name="twitter:description" content="Portfolio of Khalil Al-Khairy Abdul Hakim" />
+
+  <title>Khalil Al-Khairy — Frontend Developer & Designer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================
+       MOBILE HEADER
+       ============================ -->
+  <header class="mobile-header" id="mobileHeader">
+    <div class="mobile-header-inner">
+      <a href="#" class="mobile-logo">K<span>.</span></a>
+      <div class="mobile-controls">
+        <button class="btn-icon" id="langToggleMobile" aria-label="Toggle Language">
+          <span id="langLabelMobile">EN</span>
+        </button>
+        <button class="btn-icon" id="themeToggleMobile" aria-label="Toggle Theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================
+       MOBILE MENU OVERLAY
+       ============================ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+      <ul>
+        <li><a href="#about" class="mobile-nav-link" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="#skills" class="mobile-nav-link" data-i18n="nav.skills">Keahlian</a></li>
+        <li><a href="#projects" class="mobile-nav-link" data-i18n="nav.projects">Proyek</a></li>
+        <li><a href="#experience" class="mobile-nav-link" data-i18n="nav.experience">Pengalaman</a></li>
+        <li><a href="#education" class="mobile-nav-link" data-i18n="nav.education">Pendidikan</a></li>
+        <li><a href="#certificates" class="mobile-nav-link" data-i18n="nav.certificates">Sertifikat</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-social">
+      <a href="https://github.com/khalil16-png" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/khalil-alkhairy-abdul-hakim-a32b16388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/elkhyrx_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- ============================
+       PAGE WRAPPER
+       ============================ -->
+  <div class="page-wrapper">
+    <div class="layout">
+
+      <!-- ============================
+           LEFT COLUMN — STICKY SIDEBAR
+           ============================ -->
+      <aside class="left-col" id="leftCol">
+        <div class="left-inner">
+
+          <!-- Top Controls: Theme + Language -->
+          <div class="top-controls">
+            <button class="btn-icon theme-btn" id="themeToggle" aria-label="Toggle Theme">
+              <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+            <button class="btn-icon lang-btn" id="langToggle" aria-label="Toggle Language">
+              <span id="langLabel">EN</span>
+            </button>
+          </div>
+
+          <!-- Hero Identity -->
+          <div class="hero-info">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hai, nama saya</p>
+            <h1 class="hero-name">Khalil Al-Khairy<br><span>Abdul Hakim</span></h1>
+            <h2 class="hero-role">
+              <span id="typed-output"></span>
+            </h2>
+            <p class="hero-bio" data-i18n="hero.bio">Membangun pengalaman digital yang bersih, fungsional, dan penuh tujuan. Mahasiswa Informatika sekaligus pendidik yang percaya bahwa teknologi dan nilai-nilai baik bisa berjalan beriringan.</p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn-primary" data-i18n="hero.cta_work">Lihat Karya</a>
+              <a href="#contact" class="btn-outline" data-i18n="hero.cta_contact">Hubungi Saya</a>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <ul>
+              <li>
+                <a href="#about" class="nav-link" data-section="about" id="nav-about">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">01</span>
+                  <span class="nav-text" data-i18n="nav.about">Tentang</span>
+                </a>
+              </li>
+              <li>
+                <a href="#skills" class="nav-link" data-section="skills" id="nav-skills">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">02</span>
+                  <span class="nav-text" data-i18n="nav.skills">Keahlian</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="nav-link" data-section="projects" id="nav-projects">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">03</span>
+                  <span class="nav-text" data-i18n="nav.projects">Proyek</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" class="nav-link" data-section="experience" id="nav-experience">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">04</span>
+                  <span class="nav-text" data-i18n="nav.experience">Pengalaman</span>
+                </a>
+              </li>
+              <li>
+                <a href="#education" class="nav-link" data-section="education" id="nav-education">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">05</span>
+                  <span class="nav-text" data-i18n="nav.education">Pendidikan</span>
+                </a>
+              </li>
+              <li>
+                <a href="#certificates" class="nav-link" data-section="certificates" id="nav-certificates">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">06</span>
+                  <span class="nav-text" data-i18n="nav.certificates">Sertifikat</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-link" data-section="contact" id="nav-contact">
+                  <span class="nav-indicator"></span>
+                  <span class="nav-num">07</span>
+                  <span class="nav-text" data-i18n="nav.contact">Kontak</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://github.com/khalil16-png" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/khalil-alkhairy-abdul-hakim-a32b16388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/elkhyrx_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="social-link" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="mailto:khalilalkhairyabdulhakim@gmail.com" aria-label="Email" class="social-link" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- ============================
+           RIGHT COLUMN — SCROLLABLE
+           ============================ -->
+      <main class="right-col" id="mainContent">
+
+        <!-- ================
+             ABOUT SECTION
+             ================ -->
+        <section id="about" class="section" aria-labelledby="about-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">01.</span>
+            <h2 class="section-title" id="about-heading" data-i18n="about.title">Tentang Saya</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+              <p data-i18n="about.p1">Halo! Saya <strong>Khalil</strong> — mahasiswa Informatika di Stikom El Rahma Sejahtera, Bogor. Saya memiliki ketertarikan mendalam pada <span class="highlight">pengembangan web</span>, <span class="highlight">desain UI/UX</span>, dan <span class="highlight">desain grafis</span>.</p>
+              <p data-i18n="about.p2">Di luar dunia digital, saya juga aktif sebagai <span class="highlight">Pengajar Al-Quran</span> dan Wali Kamar di Pondok Al Ihsan Baron Bogor — sebuah peran yang mengajarkan saya kepemimpinan, empati, dan kedisiplinan yang tinggi dalam kehidupan nyata.</p>
+              <p data-i18n="about.p3">Saya percaya bahwa karya terbaik lahir dari kombinasi antara keahlian teknis dan nilai-nilai yang kuat. Setiap proyek selalu saya dekati dengan dedikasi penuh dan rasa tanggung jawab yang tinggi.</p>
+              <div class="about-badges">
+                <span class="badge" data-i18n="about.badge1">🎓 Mahasiswa Informatika</span>
+                <span class="badge" data-i18n="about.badge2">📖 Pengajar Al-Quran</span>
+                <span class="badge" data-i18n="about.badge3">💻 Frontend Developer</span>
+                <span class="badge" data-i18n="about.badge4">🎨 Graphic Designer</span>
+              </div>
+            </div>
+            <div class="about-photo" data-aos="fade-left" data-aos-delay="150">
+              <div class="photo-wrapper">
+                <img src="assets/img/khalil.jpeg" alt="Foto Profil Khalil Al-Khairy Abdul Hakim" class="profile-img" id="profileImg" onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';" />
+                <div class="photo-placeholder" id="photoPlaceholder">
+                  <span>KA</span>
+                </div>
+                <div class="photo-glow" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================
+             SKILLS SECTION
+             ================ -->
+        <section id="skills" class="section" aria-labelledby="skills-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">02.</span>
+            <h2 class="section-title" id="skills-heading" data-i18n="skills.title">Keahlian</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="skills-wrapper">
+            <!-- Hard Skills -->
+            <div class="hard-skills-col" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="skills-col-title" data-i18n="skills.hard">Hard Skills</h3>
+              <div class="skill-list">
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">HTML5</span>
+                    <span class="skill-level skill-intermediate" data-i18n="skill.intermediate">Intermediate</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="HTML skill 60%">
+                    <div class="skill-fill" data-width="60"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">CSS3</span>
+                    <span class="skill-level skill-intermediate" data-i18n="skill.intermediate">Intermediate</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="CSS skill 60%">
+                    <div class="skill-fill" data-width="60"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-level skill-beginner" data-i18n="skill.beginner">Beginner</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript skill 35%">
+                    <div class="skill-fill" data-width="35"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Canva</span>
+                    <span class="skill-level skill-intermediate" data-i18n="skill.intermediate">Intermediate</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Canva skill 60%">
+                    <div class="skill-fill" data-width="60"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Figma</span>
+                    <span class="skill-level skill-beginner" data-i18n="skill.beginner">Beginner</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="Figma skill 30%">
+                    <div class="skill-fill" data-width="30"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-meta">
+                    <span class="skill-name">Microsoft Office</span>
+                    <span class="skill-level skill-intermediate" data-i18n="skill.intermediate">Intermediate</span>
+                  </div>
+                  <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Microsoft Office skill 60%">
+                    <div class="skill-fill" data-width="60"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Currently Learning -->
+              <div class="learning-box" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="learning-label" data-i18n="skills.learning">
+                  <span class="learning-dot"></span>
+                  Sedang Dipelajari
+                </h4>
+                <div class="tags-row">
+                  <span class="tag tag-learning">PHP</span>
+                  <span class="tag tag-learning">MySQL</span>
+                  <span class="tag tag-learning">Figma</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="soft-skills-col" data-aos="fade-up" data-aos-delay="150">
+              <h3 class="skills-col-title" data-i18n="skills.soft">Soft Skills</h3>
+              <div class="soft-grid">
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">👑</div>
+                  <p data-i18n="soft.leadership">Kepemimpinan</p>
+                </div>
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">⏰</div>
+                  <p data-i18n="soft.timemanagement">Manajemen Waktu</p>
+                </div>
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">🧩</div>
+                  <p data-i18n="soft.problemsolving">Problem Solving</p>
+                </div>
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">🔄</div>
+                  <p data-i18n="soft.adaptability">Adaptabilitas</p>
+                </div>
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">❤️</div>
+                  <p data-i18n="soft.empathy">Empati</p>
+                </div>
+                <div class="soft-card">
+                  <div class="soft-icon" aria-hidden="true">🧠</div>
+                  <p data-i18n="soft.eq">Kecerdasan Emosional</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================
+             PROJECTS SECTION
+             ================ -->
+        <section id="projects" class="section" aria-labelledby="projects-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">03.</span>
+            <h2 class="section-title" id="projects-heading" data-i18n="projects.title">Proyek Pilihan</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="projects-grid">
+
+            <!-- Project 1: To Do List App -->
+            <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-img-wrapper">
+                <div class="project-img-placeholder" aria-hidden="true">
+                  <svg viewBox="0 0 80 60" fill="none">
+                    <rect width="80" height="60" rx="4" fill="var(--bg-secondary)"/>
+                    <rect x="10" y="12" width="60" height="6" rx="3" fill="var(--accent-sky)" opacity="0.3"/>
+                    <rect x="10" y="24" width="45" height="4" rx="2" fill="var(--text-secondary)" opacity="0.3"/>
+                    <rect x="10" y="32" width="50" height="4" rx="2" fill="var(--text-secondary)" opacity="0.2"/>
+                    <rect x="10" y="40" width="35" height="4" rx="2" fill="var(--text-secondary)" opacity="0.2"/>
+                    <circle cx="67" cy="45" r="8" fill="var(--accent-sky)" opacity="0.2"/>
+                    <path d="M63 45l3 3 5-5" stroke="var(--accent-sky)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <img src="assets/img/projects/Project 2.jpg" alt="Screenshot To Do List App" class="project-img" onerror="this.style.display='none'" />
+                <div class="project-overlay">
+                  <a href="https://khalil16-png.github.io/Tugas_UAS/" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" data-i18n="projects.viewdemo">Lihat Demo</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-top-row">
+                  <h3 class="project-name">To Do List App</h3>
+                  <div class="project-links" role="list">
+                    <a href="https://khalil16-png.github.io/Tugas_UAS/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo" title="Live Demo" class="project-icon-link" role="listitem">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                    <a href="https://github.com/khalil16-png" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" title="GitHub" class="project-icon-link" role="listitem">
+                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                  </div>
+                </div>
+                <p class="project-desc" data-i18n="projects.todo.desc">Aplikasi pengelola tugas digital yang membantu mengatur aktivitas harian berdasarkan prioritas, dengan antarmuka yang bersih dan responsif.</p>
+                <div class="tags-row">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <span class="project-year">2025</span>
+              </div>
+            </article>
+
+            <!-- Project 2: Poster Ramadhan -->
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-img-wrapper">
+                <div class="project-img-placeholder project-img-design" aria-hidden="true">
+                  <svg viewBox="0 0 80 60" fill="none">
+                    <rect width="80" height="60" rx="4" fill="var(--bg-secondary)"/>
+                    <circle cx="40" cy="25" r="14" fill="var(--accent-ocean)" opacity="0.3"/>
+                    <path d="M32 22c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 6-8 6c-3 0-5.6-1.5-7.2-3.8" stroke="var(--accent-sky)" stroke-width="1.5" stroke-linecap="round"/>
+                    <rect x="10" y="45" width="60" height="4" rx="2" fill="var(--accent-sky)" opacity="0.2"/>
+                    <rect x="20" y="52" width="40" height="3" rx="1.5" fill="var(--text-secondary)" opacity="0.2"/>
+                  </svg>
+                </div>
+                <img src="assets/img/projects/Project 1.jpg" alt="Poster Ramadhan Design" class="project-img" onerror="this.style.display='none'" />
+              </div>
+              <div class="project-content">
+                <div class="project-top-row">
+                  <h3 class="project-name" data-i18n="projects.poster.name">Poster Ramadhan</h3>
+                  <div class="project-links" role="list"></div>
+                </div>
+                <p class="project-desc" data-i18n="projects.poster.desc">Desain poster kompetisi bertema Ramadhan untuk menyemarakkan bulan suci dan meningkatkan antusiasme masyarakat dalam menyambut Ramadhan.</p>
+                <div class="tags-row">
+                  <span class="tag">Canva</span>
+                  <span class="tag">Graphic Design</span>
+                </div>
+                <span class="project-year">2026</span>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="projects-footer" data-aos="fade-up">
+            <a href="https://github.com/khalil16-png" target="_blank" rel="noopener noreferrer" class="btn-outline btn-with-icon" data-i18n="projects.more">
+              Lihat Lebih Banyak di GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- ================
+             EXPERIENCE SECTION
+             ================ -->
+        <section id="experience" class="section" aria-labelledby="experience-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">04.</span>
+            <h2 class="section-title" id="experience-heading" data-i18n="experience.title">Pengalaman</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="timeline-marker" aria-hidden="true">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-title" data-i18n="exp.quran.title">Pengajar Al-Quran & Wali Kamar</h3>
+                    <p class="timeline-company">Pondok Al Ihsan Baron Bogor</p>
+                  </div>
+                  <span class="timeline-period">2025 — <span data-i18n="exp.present">Sekarang</span></span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.quran.desc">Membimbing ±20 santri dalam pembelajaran Al-Quran secara rutin dan berkelanjutan. Bertanggung jawab penuh sebagai wali kamar dalam pengawasan, pembinaan karakter, dan pengembangan diri para santri sehari-hari.</p>
+                <div class="tags-row">
+                  <span class="tag" data-i18n="tag.teaching">Pengajaran</span>
+                  <span class="tag" data-i18n="tag.leadership">Kepemimpinan</span>
+                  <span class="tag" data-i18n="tag.mentoring">Mentoring</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item timeline-item-last" data-aos="fade-up" data-aos-delay="200">
+              <div class="timeline-marker" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-title" data-i18n="exp.smelt.title">Divisi Humas</h3>
+                    <p class="timeline-company">Smelt Solunity</p>
+                  </div>
+                  <span class="timeline-period">2025 — 2026</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.smelt.desc">Terjun langsung ke masyarakat dalam pengalokasian dan koordinasi acara organisasi. Menjalin komunikasi eksternal aktif dengan masjid-masjid sekitar untuk penyebaran informasi dan undangan kegiatan.</p>
+                <div class="tags-row">
+                  <span class="tag" data-i18n="tag.pr">Public Relations</span>
+                  <span class="tag" data-i18n="tag.communication">Komunikasi</span>
+                  <span class="tag" data-i18n="tag.community">Komunitas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================
+             EDUCATION SECTION
+             ================ -->
+        <section id="education" class="section" aria-labelledby="education-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">05.</span>
+            <h2 class="section-title" id="education-heading" data-i18n="education.title">Pendidikan</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="edu-grid">
+            <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="edu-icon-wrap" aria-hidden="true">🎓</div>
+              <div class="edu-body">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-school" data-i18n="edu.stikom.school">Stikom El Rahma Sejahtera</h3>
+                    <p class="edu-major" data-i18n="edu.stikom.major">S1 Informatika</p>
+                  </div>
+                  <span class="edu-period">2025 — <span data-i18n="edu.present">Sekarang</span></span>
+                </div>
+                <p class="edu-desc" data-i18n="edu.stikom.desc">Semester 2 · Mempelajari dasar-dasar ilmu komputer, pemrograman web, algoritma, dan sistem informasi.</p>
+                <div class="tags-row">
+                  <span class="tag" data-i18n="tag.active">Aktif</span>
+                  <span class="tag">Informatika</span>
+                  <span class="tag">Bogor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="edu-icon-wrap" aria-hidden="true">📚</div>
+              <div class="edu-body">
+                <div class="edu-header">
+                  <div>
+                    <h3 class="edu-school" data-i18n="edu.sma.school">SMA Tahfidz Anharul Ulum</h3>
+                    <p class="edu-major" data-i18n="edu.sma.major">Ilmu Pengetahuan Sosial (IPS)</p>
+                  </div>
+                  <span class="edu-period">2023 — 2025</span>
+                </div>
+                <p class="edu-desc" data-i18n="edu.sma.desc">Menyelesaikan pendidikan menengah atas dengan fokus pada ilmu sosial di lingkungan sekolah berbasis Tahfidz Al-Quran.</p>
+                <div class="tags-row">
+                  <span class="tag" data-i18n="tag.graduate">Lulus</span>
+                  <span class="tag">IPS</span>
+                  <span class="tag">Tahfidz</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================
+             CERTIFICATES SECTION
+             ================ -->
+        <section id="certificates" class="section" aria-labelledby="certificates-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">06.</span>
+            <h2 class="section-title" id="certificates-heading" data-i18n="certs.title">Sertifikat & Penghargaan</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="certs-grid">
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="cert-icon-wrap" aria-hidden="true">🏅</div>
+              <div class="cert-body">
+                <h3 class="cert-name" data-i18n="cert1.name">Certificate of Appreciation</h3>
+                <p class="cert-issuer">GDG Bogor <span class="cert-full">(Google Developer Groups)</span></p>
+                <span class="cert-year">2025</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="cert-icon-wrap" aria-hidden="true">🏆</div>
+              <div class="cert-body">
+                <h3 class="cert-name" data-i18n="cert2.name">Sertifikat Penghargaan</h3>
+                <p class="cert-issuer">LDK El Rahma & Stikom El Rahma Sejahtera</p>
+                <span class="cert-year">2026</span>
+                <p class="cert-context" data-i18n="cert2.context">Partisipasi aktif dalam Rangkaian Kegiatan Mabit Ramadhan</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================
+             CONTACT SECTION
+             ================ -->
+        <section id="contact" class="section section-last" aria-labelledby="contact-heading">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-num" aria-hidden="true">07.</span>
+            <h2 class="section-title" id="contact-heading" data-i18n="contact.title">Hubungi Saya</h2>
+            <div class="section-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="contact-wrapper">
+            <div class="contact-left" data-aos="fade-up" data-aos-delay="100">
+              <p class="contact-intro" data-i18n="contact.intro">Punya pertanyaan, tawaran kolaborasi, atau sekadar ingin menyapa? Saya selalu terbuka untuk percakapan yang bermakna!</p>
+              <div class="contact-items">
+                <a href="mailto:khalilalkhairyabdulhakim@gmail.com" class="contact-item-link">
+                  <div class="contact-item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <p class="contact-item-label" data-i18n="contact.email_label">Email</p>
+                    <p class="contact-item-value">khalilalkhairyabdulhakim@gmail.com</p>
+                  </div>
+                </a>
+                <a href="https://wa.me/6285722443263" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+                  <div class="contact-item-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  </div>
+                  <div>
+                    <p class="contact-item-label" data-i18n="contact.wa_label">WhatsApp</p>
+                    <p class="contact-item-value">+62 857 2244 3263</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate data-aos="fade-up" data-aos-delay="150">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" data-i18n="contact.name_label">Nama Anda</label>
+                  <input type="text" id="contactName" name="name" required placeholder="John Doe" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" data-i18n="contact.email_label2">Email Anda</label>
+                  <input type="email" id="contactEmail" name="email" required placeholder="john@example.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="contact.message_label">Pesan</label>
+                <textarea id="contactMessage" name="message" rows="5" required placeholder="Halo Khalil, saya ingin..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                <span data-i18n="contact.send">Kirim Pesan</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer" role="contentinfo">
+          <p data-i18n="footer.built">Dirancang &amp; Dibangun oleh <span class="highlight">Khalil Al-Khairy Abdul Hakim</span></p>
+          <p class="footer-stack">HTML · CSS · JavaScript</p>
+        </footer>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ============================
+       SCRIPTS
+       ============================ -->
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Main App JS -->
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
